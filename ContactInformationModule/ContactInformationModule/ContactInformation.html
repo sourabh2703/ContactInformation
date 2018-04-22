@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ContactInformation</title>
+    <link href="Content/bootstrap.min.css"
+          rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.min.js">
+    </script>
+    <script src="Scripts/bootstrap.min.js">
+    </script>
+    <script src="Scripts/ConversationInformation.js">
+    </script>
+
+</head>
+<body>
+    <input type="hidden" id="ContactId" value="0" />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Contact Informations</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <table id="contactInformationTable"
+                       class="table table-bordered
+                 table-condensed table-striped">
+                    <thead>
+                        <tr>
+                            <th>Edit</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Status</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" style="margin-bottom:5px">
+                <button type="button" id="addButton"
+                        class="btn btn-primary"
+                        onclick="addClick();">
+                    Add Contact Information
+                </button>
+            </div>
+        </div>
+        <div class="row" id="contactInfoAddUpdate" style="border:1px solid; display:none;">
+            <div class="col-sm-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <b>Contact Information</b>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="firstName" >First Name</label>
+                            <input type="text" id="firstName" maxlength="50" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last name</label>
+                            <input type="text" id="lastName" maxlength="50" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" maxlength="50" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="number" id="phoneNumber"
+                                   class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <input type="checkbox" id="status"
+                                   class="form-control" style="width:5%" />
+                        </div>
+                    </div>
+                    <div class="panel-footer" style="margin-left:5px">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button type="submit" id="updateButton"
+                                        class="btn btn-primary"
+                                        onclick="updateClick();">
+                                    Add
+                                </button>
+                            </div>
+                            <div class="col-xs-12" style="margin-left:20px">
+                                <button type="button" id="resetButton"
+                                        class="btn btn-primary"
+                                        onclick="resetClick();">
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
